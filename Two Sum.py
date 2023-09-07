@@ -1,20 +1,14 @@
 def two_num_sum(points, sumOfnums):
-    num_dict = {}  # Create a dictionary to store the numbers we've seen and their indices
+    num_dict = {}
 
-    # Iterate through the list
     for i in range(len(points)):
         num = points[i]
-        complement = sumOfnums - num  # Calculate the complement required to reach the target
+        complement = sumOfnums - num
 
-        # Check if the complement is already in the dictionary
         if complement in num_dict:
-            # If found, return the indices of the two numbers
             return [num_dict[complement], i]
-
-        # Otherwise, add the current number and its index to the dictionary
         num_dict[num] = i
 
-    # If no solution is found, return an empty list
     return []
 
 points1 = [2, 7, 11, 15]
